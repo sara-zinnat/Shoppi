@@ -14,12 +14,12 @@ const Image= styled.img`
 `;
 
 const Info = styled.div`
-    vertical-align: top;
+    position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
     height: 100%; 
-    display: in;ine-block;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -27,15 +27,13 @@ const Info = styled.div`
 
 const Title = styled.h1`
     color: orange;
-    font-weight: 700px:
     margin-bottom: 20px;
-    position: relative;
 `;
 const Button = styled.button`
-    border: none;
+    border: black;
     padding: 10px;
     background-color: white;
-    color:gray;
+    color: gray;
     cursor: pointer;
     font-weight: 600;
 `;
