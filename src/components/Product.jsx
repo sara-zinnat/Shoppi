@@ -15,7 +15,6 @@ const Info = styled.div`
     justify-content: center;
     transition: all 0.5s ease;
     cursor: pointer;
-    
 `;
 
 const Container = styled.div`
@@ -29,11 +28,10 @@ const Container = styled.div`
     background-color: #f5fbfd;
     position: relative;
 
-    &:hover $(Info){
+    &:hover ${Info}{
         opacity: 1;
     }
-
-`;
+`;  
 
 const Circle = styled.div`
     width: 200px;
