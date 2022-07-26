@@ -92,7 +92,7 @@ const Footer = () => {
                 Welcome to the shopping world of shoppie. 
             </Desc>
             <SocialContainer>
-                <SocialIcon color = "3B5999">
+                <SocialIcon color = "4167B2">
                     <Facebook/>
                 </SocialIcon>
                 <SocialIcon color = "E4405F">
