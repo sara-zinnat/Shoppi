@@ -4,7 +4,12 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { Add, Remove } from '@material-ui/icons'
 
-const Container = styled.div``;
+const Container = styled.div`
+    height: 60px;
+    @media only screen and (max-width: 380px){;
+        display: none;
+    }
+`;
 
 const Wrapper = styled.div`
     padding: 20px;
@@ -68,6 +73,12 @@ const ProductPrice = styled.div`
     font-size: 30px;
     font-weight: 200;
 `;
+const Hr = styled.hr`
+    background-color:#eee;
+    border: none;
+    height: 1px;
+
+`;
 
 const Image = styled.img`
     width: 200px;
@@ -98,6 +109,34 @@ const PriceDetail = styled.div`
 
 const Summary = styled.div`
     flex: 1;
+    border: 0.5px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    height: 50vh;
+`;
+
+const SummaryTitle = styled.h1`
+    font-weight: 200;
+`;
+
+const SummaryItem = styled.div`
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: ${(props) => props.type === "total" && "500"};
+    font-size: ${(props) => props.type === "total" && "24px"};
+`;
+
+const SummaryItemText = styled.span``;
+
+const SummaryItemPrice = styled.span``;
+
+const Button = styled.button`
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
 `;
 
 const Cart = () => {
@@ -142,15 +181,15 @@ const Cart = () => {
                     <Hr/>
                     <Product>
                         <ProductDetail>
-                            <Image src= "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg" />
+                            <Image src= "https://images.pexels.com/photos/2560894/pexels-photo-2560894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
                             <Details>
                                 <ProductName>
-                                    <b>Product:</b> Running Shoes
+                                    <b>Product:</b> Pac-man T-Shirt
                                 </ProductName>
-                                <ProductId><b>ID:</b> 9381371829
+                                <ProductId><b>ID:</b> 9381371893
                                 </ProductId>
-                                <ProductColor color= "gray"/>
-                                <ProductSize><b>Size:</b> 37.5</ProductSize>
+                                <ProductColor color= "yellow"/>
+                                <ProductSize><b>Size:</b> M </ProductSize>
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
@@ -163,7 +202,26 @@ const Cart = () => {
                         </PriceDetail>
                     </Product>
                 </Info>
-                <Summary>Summary</Summary>
+                <Summary>
+                    <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+                    <SummaryItem>
+                        <SummaryItemText>Subtotal</SummaryItemText>
+                        <SummaryItemPrice>$ 80</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Estimated Shipping</SummaryItemText>
+                        <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Shipping Discount</SummaryItemText>
+                        <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem type="total">
+                        <SummaryItemText>Total</SummaryItemText>
+                        <SummaryItemPrice>$ 80</SummaryItemPrice>
+                    </SummaryItem>
+                    <Button>CHECKOUT NOW</Button>
+                </Summary>
             </Bottom>
         </Wrapper>
         <Footer/>
