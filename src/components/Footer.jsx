@@ -1,13 +1,12 @@
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from "@material-ui/icons";
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 
 
 
 const Container = styled.div`
     display: flex;
-    display = flex;
-    flex-direction = column;
-    padding = 20px;
+    ${mobile({ flexDirection: "column" })}
 `;
 
 const Logo = styled.h1`
@@ -39,10 +38,14 @@ const SocialIcon = styled.div`
 const Left = styled.div`
     flex: 1;
     padding: 20px;
+    flex-direction: column;
+    padding: 20px;
 `;
 
 const Center = styled.div`
     flex: 1;
+    padding: 20px;
+    flex-direction: column;
     padding: 20px;
 `;
 
@@ -69,6 +72,7 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({ backgroundColor: "#fff8f8" })}
 
 `;
 
@@ -92,7 +96,7 @@ const Footer = () => {
                 Welcome to the shopping world of shoppie. 
             </Desc>
             <SocialContainer>
-                <SocialIcon color = "4167B2">
+                <SocialIcon color = "3B5999">
                     <Facebook/>
                 </SocialIcon>
                 <SocialIcon color = "E4405F">
@@ -123,9 +127,9 @@ const Footer = () => {
         </Center>
         <Right>
             <Title>Contact</Title>
-            <ContactItem><Room style={{marginRight:"10px"}}/>Lethbridge, Alberta</ContactItem>
+            <ContactItem><Room style={{marginRight:"10px"}}/>Calgary, Alberta</ContactItem>
             <ContactItem><Phone style={{marginRight:"10px"}}/>+ 587-XXX-XXXX</ContactItem>
-            <ContactItem><MailOutline style= {{marginRight:"10px"}}/>shaz20@gmail.com</ContactItem>
+            <ContactItem><MailOutline style= {{marginRight:"10px"}}/>sh0@gmail.com</ContactItem>
             <Payment src = "https://i.ibb.co/Qfvn4z6/payment.png"/>
         </Right>
     </Container>
