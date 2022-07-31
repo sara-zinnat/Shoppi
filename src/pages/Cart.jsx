@@ -3,14 +3,9 @@ import Announcements from '../components/Announcements'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { Add, Remove } from '@material-ui/icons'
-import { mobile } from "../Responsive";
+import { mobile } from '../Responsive';
 
-const Container = styled.div`
-    height: 60px;
-    @media only screen and (max-width: 380px){;
-        display: none;
-    }
-`;
+const Container = styled.div``;
 
 const Wrapper = styled.div`
     padding: 20px;
